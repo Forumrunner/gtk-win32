@@ -1,4 +1,4 @@
- * Download [GLib 2.36.2](http://ftp.acc.umu.se/pub/gnome/sources/glib/2.36/glib-2.36.2.tar.xz)
+ * Download [GLib 2.39.2](http://ftp.acc.umu.se/pub/gnome/sources/glib/2.39/glib-2.39.2.tar.xz)
  * Extract to `C:\mozilla-build\hexchat`
  * In `build\win32\vc12\glib.props`, replace:
 	* `intl.lib` with `libintl.lib`

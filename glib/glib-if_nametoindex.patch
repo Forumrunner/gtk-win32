@@ -1,0 +1,12 @@
+diff -urN glib-2.39.2.orig/config.h glib-2.39.2/config.h
+--- glib-2.39.2.orig/config.h.win32	2013-12-16 21:41:39.000000000 -0800
++++ glib-2.39.2/config.h.win32	2014-01-09 01:23:11.504776600 -0800
+@@ -227,7 +227,7 @@
+ /* Windows Vista/Server 2008, so disabled for now-please see */
+ /* http://msdn.microsoft.com/en-us/library/windows/desktop/bb408409%28v=vs.85%29.aspx */
+ /* A workaround for Windows XP is under review in Bug 668071 */
+-/* #undef HAVE_IF_NAMETOINDEX */
++#define HAVE_IF_NAMETOINDEX 1
+ 
+ /* Define to 1 if you have the `inotify_init1' function. */
+ /* #undef HAVE_INOTIFY_INIT1 */
