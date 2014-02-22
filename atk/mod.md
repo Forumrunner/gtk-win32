@@ -1,4 +1,4 @@
- * Download [ATK 2.9.3](http://ftp.gnome.org/pub/gnome/sources/atk/2.9/atk-2.9.3.tar.xz)
+ * Download [ATK 2.9.4](http://ftp.gnome.org/pub/gnome/sources/atk/2.9/atk-2.9.4.tar.xz)
  * Extract to `C:\mozilla-build\hexchat`
  * In `build\win32\vc12\atk.props`, replace:
 	* `intl.lib` with `libintl.lib`
