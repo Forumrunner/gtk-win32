@@ -1,4 +1,4 @@
- * Download [GTK+ 2.24.19](http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.19.tar.xz)
+ * Download [GTK+ 2.24.22](http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.22.tar.xz)
  * Extract to `C:\mozilla-build\hexchat`
  * Patch with `patch -p1 -i gtk-revert-scrolldc-commit.patch`
  * Patch with `patch -p1 -i gtk-pixmap.patch`

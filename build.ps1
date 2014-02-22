@@ -141,13 +141,13 @@ $items = @{
 	'gdk-pixbuf'       = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gdk-pixbuf-2.30.2.7z';    'Dependencies' = @('glib', 'libpng')                    };
 	'gettext-runtime'  = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gettext-runtime-0.18.7z'; 'Dependencies' = @('win-iconv')                         };
 	'glib'             = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/glib-2.39.2.7z';          'Dependencies' = @('gettext-runtime', 'libffi', 'zlib') };
-	'gtk'              = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk-2.24.19.7z';          'Dependencies' = @('atk', 'gdk-pixbuf', 'pango')        };
-	'harfbuzz'         = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.18.7z';      'Dependencies' = @('freetype', 'glib')                  };
+	'gtk'              = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/gtk+-2.24.22.7z';         'Dependencies' = @('atk', 'gdk-pixbuf', 'pango')        };
+	'harfbuzz'         = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/harfbuzz-0.9.25.7z';      'Dependencies' = @('freetype', 'glib')                  };
 	'libffi'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libffi-3.0.13.7z';        'Dependencies' = @()                                    };
 	'libpng'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libpng-1.6.8.7z';         'Dependencies' = @('zlib')                              };
 	'libxml2'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/libxml2-2.9.1.7z';        'Dependencies' = @('win-iconv')                         };
-	'openssl'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1e.7z';       'Dependencies' = @('zlib')                              };
-	'pango'            = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.32.5.7z';         'Dependencies' = @('cairo', 'harfbuzz')                 };
+	'openssl'          = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/openssl-1.0.1f.7z';       'Dependencies' = @('zlib')                              };
+	'pango'            = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pango-1.36.1.7z';         'Dependencies' = @('cairo', 'harfbuzz')                 };
 	'pixman'           = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/pixman-0.32.4.7z';        'Dependencies' = @('libpng')                            };
 	'win-iconv'        = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/win-iconv-0.0.6.7z';      'Dependencies' = @()                                    };
 	'zlib'             = @{ 'ArchiveUrl' = 'http://dl.hexchat.net/gtk-win32/src/zlib-1.2.8.7z';           'Dependencies' = @()                                    };
@@ -616,8 +616,6 @@ $items['libxml2'].BuildScript = {
 $items['openssl'].BuildScript = {
 	$packageDestination = "$PWD-$filenameArch"
 	Remove-Item -Recurse $packageDestination -ErrorAction Ignore
-
-	Exec $Patch -p1 -i openssl-tls-error.patch
 
 	$originalEnvironment = Swap-Environment $vcvarsEnvironment
 

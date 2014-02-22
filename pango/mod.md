@@ -1,4 +1,4 @@
- * Download [Pango 1.32.5](http://ftp.gnome.org/pub/GNOME/sources/pango/1.32/pango-1.32.5.tar.xz)
+ * Download [Pango 1.36.1](http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.1.tar.xz)
  * Extract to `C:\mozilla-build\hexchat`
  * Patch with `patch -p1 -i pango.patch`
  * In `build\win32\vc12\pango.props`, replace:
